@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
   role: { type: String, enum: ['founder', 'investor', 'jobseeker'], default: 'jobseeker' },
   bio: { type: String  },
   skills: [{ type: String  }],
-  interests: [{String}],
+  interests: [{ type: String  }],
   profilePic:{ type: String  },
   createdAt: { type: Date, default: Date.now }
 });
