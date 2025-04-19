@@ -3,3 +3,8 @@ body{
   margin: 0;
   overflow-x: hidden;
 }
+
+
+*{
+  font-family: "Space Grotesk", sans-serif;
+}

@@ -16,7 +16,7 @@ UserRouter.post('/create', upload.single("image") , CreateUser);
 
 UserRouter.post('/login',  SignInUser);
 
-UserRouter.get('/profile/:id' , GetUserData);
+UserRouter.get('/profile/' ,auth, GetUserData);
 
 
 

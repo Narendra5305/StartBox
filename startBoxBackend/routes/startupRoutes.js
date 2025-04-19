@@ -1,17 +1,13 @@
 const express = require('express');
 const StartUpRouter = express.Router();
 
+const {createStartup , getAllStartups , getStartupById} = require("../controller/startupController")
 
-StartUpRouter.post('/', (req, res) => {
-  
-});
 
-StartUpRouter.get('/', (req, res) => {
-  
-});
+StartUpRouter.post('/', createStartup);
 
-StartUpRouter.get('/:id', (req, res) => {
- 
-});
+StartUpRouter.get('/', getAllStartups);
+
+StartUpRouter.get('/:id', getStartupById);
 
 module.exports = {StartUpRouter};

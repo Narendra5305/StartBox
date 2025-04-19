@@ -1,17 +1,12 @@
 const express = require('express');
 const JobRouter = express.Router();
 
+const {createJob , getAllJobs , getJobById } = require("../controller/jobController")
 
-JobRouter.post('/', (req, res) => {
-  
-});
+JobRouter.post('/',createJob);
 
-JobRouter.get('/', (req, res) => {
-  
-});
+JobRouter.get('/', getAllJobs);
 
-JobRouter.get('/:id', (req, res) => {
-  
-});
+JobRouter.get('/:id', getJobById);
 
 module.exports = {JobRouter};

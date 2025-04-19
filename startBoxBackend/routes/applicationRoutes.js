@@ -1,17 +1,13 @@
 const express = require('express');
 const ApplicationRouter = express.Router();
 
+const {createApplication,getApplicationsByUser,getApplicationsByJob} = require("../controller/applicationController");
 
-ApplicationRouter.post('/', (req, res) => {
- 
-});
 
-ApplicationRouter.get('/user/:userId', (req, res) => {
-  
-});
+ApplicationRouter.post('/', createApplication);
 
-ApplicationRouter.get('/job/:jobId', (req, res) => {
- 
-});
+ApplicationRouter.get('/user/:userId', getApplicationsByUser);
+
+ApplicationRouter.get('/job/:jobId', getApplicationsByJob);
 
 module.exports = {ApplicationRouter};
