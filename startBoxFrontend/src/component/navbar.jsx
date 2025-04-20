@@ -2,9 +2,12 @@ import React ,{useState} from "react";
 
 import "./componentCss/navbar.css"
 
+import { useNavigate } from 'react-router';
+
 function NavbarContOne(){
+    const navigate = useNavigate();
     return(
-        <div className="navbar-cont-1">
+        <div onClick={()=>navigate("/")} className="navbar-cont-1">
             <h2>StartBox</h2>
         </div>
     )
@@ -14,6 +17,7 @@ function NavbarContOne(){
 function NavbarContTwo(){
     
     const [activeDropdown, setActiveDropdown] = useState(null);
+   
 
     const items = [
         { name: 'Products', content: ["Venture Funds" ,"Rolling Funds" , "Scout Funds" , "SPVs" ,"Roll Up Vehicles" ] },
@@ -61,9 +65,10 @@ function NavbarContTwo(){
 
 
 function NavbarContThree(){
+    const navigate = useNavigate();
     return(
         <div className="navbar-cont-3">
-            <button>Sign in</button>
+            <button onClick={()=> navigate('/signin')}>Sign in</button>
             <button>Contact Sales</button>
         </div>
     )

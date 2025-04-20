@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useCreateUserMutation } from "../features/api/apiSlice";
 import "./pageCss/signup.css"
 
+import { useNavigate } from 'react-router';
+
 
 function RegisterForm() {
     const [formData, setFormData] = useState({
@@ -16,6 +18,8 @@ function RegisterForm() {
   
     const [profilePic, setProfilePic] = useState(null);
     const [createUser, { isLoading, isSuccess, error }] = useCreateUserMutation();
+
+    const navigate = useNavigate();
   
     const handleChange = (e) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -76,6 +80,11 @@ function RegisterForm() {
             {isSuccess && <p style={{ color: 'green' }}>User created successfully!</p>}
             {error && <p style={{ color: 'red' }}>Something went wrong.</p>}
         </form>
+
+        <p className="signup-link">
+          If you have already an account?{' '}
+          <span onClick={() => navigate('/signin')}>Sign in</span>
+        </p>
       </div>
     );
   }

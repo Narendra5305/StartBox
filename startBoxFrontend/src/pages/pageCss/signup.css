@@ -1,4 +1,4 @@
-/* signup.css */
+
 
 .registrations {
     background-color: #ffffff;
@@ -8,6 +8,7 @@
     max-width: 600px;
     margin: 3rem auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 150px;
   }
   
   .registrations-form {

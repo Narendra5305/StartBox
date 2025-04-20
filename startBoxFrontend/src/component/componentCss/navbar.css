@@ -5,6 +5,11 @@
     background-color: #001D21;
     display: flex;
     justify-content: center;
+    position:fixed;
+  
+    top: 0;
+   
+    z-index: 999; 
 }
 
 .navbar-cont{
@@ -22,6 +27,11 @@
     font-weight: 200;
     letter-spacing: .1rem;
     font-style: normal;
+}
+
+
+.navbar-cont-1{
+    cursor: pointer;
 }
 
 
@@ -102,3 +112,15 @@
    color: white;
    background-color: transparent;
 }
+
+
+
+
+.navbar-cont-3 button{
+    cursor: pointer;
+}
+
+
+
+
+
